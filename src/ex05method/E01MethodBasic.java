@@ -12,7 +12,8 @@ package ex05method;
 
 import java.util.Scanner;
 
-public class E01MethodBasic {
+public class E01MethodBasic   
+{/* github연동완료 */
 	
 	/*
 	 메서드1:반환갑O,매개변수O 형태
