@@ -1,10 +1,11 @@
-package task;
+package ex12inheritance;
 
 //친구의 정보를 저장할 기본클래스
 class MyFriendInfo {
 	private String name;
 	int age;
-
+	
+	//생성자
 	public MyFriendInfo(String name, int age) {
 		this.name = name;
 		this.age = age;
@@ -27,7 +28,6 @@ class MyFriendDetailInfo extends MyFriendInfo {
 		this.addr=addr;
 		this.phone=phone;
 	}
-
 	public void showMyFriendDetailInfo() {
 		showMyFriendInfo();
 		System.out.println("주소: " + addr);
@@ -41,7 +41,6 @@ class QuMyFriendDetailInfo {
 		// 정보Print
 		MyFriendDetailInfo friend = new MyFriendDetailInfo("이순신",100,
 				"성균관","010-1000-8888");
-		
 		friend.showMyFriendDetailInfo();
 		
 	}
