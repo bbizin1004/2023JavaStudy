@@ -10,7 +10,7 @@ class Orange {
 	}
 
 	public void showInfo() {
-		System.out.println("오렌지의 당조는 " + sugar + " 입니다.");
+		System.out.println("오렌지의 당도는 " + sugar + " 입니다.");
 	}
 }
 //오렌지만 저장할 수 있는 전용박스 클래스 정의

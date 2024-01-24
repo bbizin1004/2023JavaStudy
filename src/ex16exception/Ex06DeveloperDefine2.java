@@ -21,7 +21,8 @@ public class Ex06DeveloperDefine2 {
 	}
 
 	/*
-	 * 1차버전에서는 발생된 예외를 main함수쪽으로 throws 했다. 2차버전에서는 던지기를 하지않고 해당 메서드에서 직접 예외처리를 한다.
+	 * 1차버전에서는 발생된 예외를 main함수쪽으로 throws 했다. 
+	 * 2차버전에서는 던지기를 하지않고 해당 메서드에서 직접 예외처리를 한다.
 	 */
 	public static int readAge() {
 		Scanner sc = new Scanner(System.in);

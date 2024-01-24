@@ -20,7 +20,7 @@ public class Ex04MultiCatch {
 		int array[]= new int [3];
 		try {
 			
-			//3개으 문자열을 입력받는다.
+			//3개의 문자열을 입력받는다.
 			for(int i =0; i<array.length;i++)
 			{
 			/*
@@ -35,7 +35,7 @@ public class Ex04MultiCatch {
 			 */
 			System.out.println("배열에 저장된 두 숫자나누기:"+array[0]/array[1]);
 			//나이 입력시 문자를 입력하면 예외가 발생한다.
-			System.out.print("나이를 입렵하세요:");
+			System.out.print("나이를 입력하세요:");
 			int age = scanner.nextInt();
 			System.out.println("당신의 나이는:"+age);
 			

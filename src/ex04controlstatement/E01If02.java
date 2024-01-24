@@ -31,7 +31,6 @@ public class E01If02 {
 		 형식]
 		     변수=(조건식)? 참일때 : 거짓일때;
 		 */
-		
 		String numberResult= (num%2==0) ? "짝수임":"홀수임";
 		System.out.println("숫자"+num+"은"+numberResult);
 		
