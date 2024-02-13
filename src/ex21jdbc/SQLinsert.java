@@ -7,7 +7,7 @@ public class SQLinsert extends MyConnection {
 	
 	/*
 	 생성자에서 부모클래스의 생성자를 호출하여 DB에 연결한다.
-	 연결할 계정으 아이디와 비번을 매개변수로 전달하고 있다.
+	 연결할 계정의 아이디와 비번을 매개변수로 전달하고 있다.
 	 */
 	public SQLinsert(String user, String pass) {
 		super(user, pass);

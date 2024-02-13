@@ -3,7 +3,7 @@ package ex21jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class OravleConnect {
+public class DBConnect {
 
 	public static void main(String[] args) {
 		
@@ -17,7 +17,7 @@ public class OravleConnect {
 		
 		2.오라클 연결을 위한 커넥션URL, 계정아이디, 패스워드를 준비한다.
 		커넥션URL =>
-		 dbc:oracle:thin:@오라클서버의 IP주소:포트번호:SID명
+		 jdbc:oracle:thin:@오라클서버의 IP주소:포트번호:SID명
 		※서버환경에 따라 IP주소, 포트번호, SID는 변경될 수 있다.
 		
 		3.DriverMaNager 클래스의 정적메서드인 getConnection()을
@@ -31,10 +31,18 @@ public class OravleConnect {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String id = "hr";
+			String id = "study";
 			String pass = "1234";
 			
+			/*
+			◈ Connection 인터페이스
+			Connection 객체는 특정 데이터 원본과 연결된 커넥션을 나타낸다. 
+			SQL 문장을 정의하고 실행시킬 수 있는 Statement 객체를 생성할 때 
+			Connection 객체를 사용한다.*/
 			Connection con = 
+					/*DriverManager 클래스 는 데이터 원본에 JDBC 드라이버를
+					 통해 커넥션을 만드는 역활을 한다.
+					 Class.forName() 메소드를 통해서 생성된다.*/
 					DriverManager.getConnection(url,id,pass);
 			if(con!=null) {
 				System.out.println("Oracle 연결성공");

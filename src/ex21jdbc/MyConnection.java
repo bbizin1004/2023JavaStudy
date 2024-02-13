@@ -11,16 +11,37 @@ import java.util.Scanner;
 public class MyConnection implements IConnect {
 	
 	/*
-	 멤버변수 : JDBC 작업을 위해 필요한 여러가지 인스턴스를 정으
+	 멤버변수 : JDBC 작업을 위해 필요한 여러가지 인스턴스를 정의
 	 	DB연결, select결과의 반환, 정적쿼리문 실행,동적쿼리문 실행,
 	 	프로시져 실행의 기능을 수행한다.
 	 */
 	
+	/*
+	 Statement 인터페이스 사용
+	 Statement 객체는 단순한 정적SQL문을 사용할 경우에 좋다.
+	 SQL문을 직접적으로 작성하기 때문에 쉽게 분석할 수 있다.
+	 단점
+	 SQL문이 문자열로 작성되기 문자열과 같은 값을 넣기위해 작은따옴표(')등의 처리를 직접 처리해야한다.
+	 작성된 SQL문을 재사용하기 어렵다.
+	 
+	 PreparedStatement 인터페이스 사용
+	 sql문장을 미리 컴파일할 수 있도록 개선되었다.
+	 작은따옴표(')같은 문자열 등을 자동적으로 처리한다.
+	 재사용하기 편리하다.
+	 미리 컴파일되기 때문에 쿼리의 수행 속도가 Statement 객체에 비해 빠르다.
+	  
+	 CallableStatement 인터페이스 사용
+	 Connection 객체의 prepareCall() 메소드를 사용해서 객체를 생성한다. 
+	 CallableStatement 객체는 주로 저장프로시저(Stored Procedure)를 
+	 호출하기 위해 사용된다.
+	*/
+	
+
 	public Connection con;
-	public ResultSet rs;
-	public Statement stmt;
-	public PreparedStatement psmt;
-	public CallableStatement csmt;
+	public ResultSet rs; //select 결과의 반환
+	public Statement stmt; //정적쿼리문을 처리할때 빠른 객체
+	public PreparedStatement psmt;//동적쿼리문을 처리할때 빠른 객체
+	public CallableStatement csmt;//프로시저를 호출하도록 도와주는 객체
 	
 	//생성자 : 사용자 계정과 패스워드를 전달받아 DB에 연결한다.
 	public MyConnection(String user,String pass) {
